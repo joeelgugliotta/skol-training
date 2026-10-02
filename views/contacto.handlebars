@@ -1,0 +1,95 @@
+<section class="section contacto">
+
+    <span class="section-number">05</span>
+
+    <h1>CONTACTO</h1>
+
+    <p>
+        ¿Querés adquirir una planificación de SKOL?
+        Completá el formulario y te contacto para coordinar.
+    </p>
+
+
+    {{#if plan}}
+
+        <div class="plan-selected">
+
+            <span>PLAN SELECCIONADO</span>
+
+            <h2>{{plan}}</h2>
+
+        </div>
+
+    {{else}}
+
+        <div class="plan-selected">
+
+            <span>CONSULTA GENERAL</span>
+
+            <h2>SKOL TRAINING</h2>
+
+        </div>
+
+    {{/if}}
+
+
+    <form action="/contacto" method="POST" class="contact-form">
+
+        <div class="form-group">
+
+            <label for="nombre">
+                NOMBRE
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="email">
+                EMAIL
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tuemail@gmail.com"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="mensaje">
+                MENSAJE
+            </label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Contame qué estás buscando..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <button type="submit" class="btn">
+            QUIERO ESTE PLAN →
+        </button>
+
+    </form>
+
+</section>

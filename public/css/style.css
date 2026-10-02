@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    color: #aaaaaa;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #cccccc;
+}
+
+/* SECCIONES */
+
+.section {
+    padding: 100px 8%;
+}
+
+.section h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 700px;
+    color: #aaaaaa;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* PLANES */
+
+.planes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.plan {
+    border: 1px solid #333333;
+    padding: 35px;
+    transition: 0.3s;
+}
+
+.plan:hover {
+    border-color: white;
+    transform: translateY(-5px);
+}
+
+.plan h2 {
+    margin-bottom: 20px;
+}
+
+.plan p {
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #292929;
+    padding: 30px 8%;
+    color: #777777;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .planes {
+        grid-template-columns: 1fr;
+    }
+
+    .section h1 {
+        font-size: 45px;
+    }
+}
+
+/* =========================
+   PLANES
+========================= */
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-number {
+    display: block;
+    color: #777777;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.planes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.plan {
+    display: block;
+    padding: 40px;
+    border: 1px solid #333333;
+    color: white;
+    text-decoration: none;
+    min-height: 330px;
+
+    transition: 0.3s;
+}
+
+.plan:hover {
+    border-color: white;
+    transform: translateY(-5px);
+}
+
+.plan-number {
+    display: block;
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.plan h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.plan h3 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #888888;
+    margin-bottom: 25px;
+}
+
+.plan p {
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.plan-link {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   DETALLE DEL PLAN
+========================= */
+
+.plan-detail {
+    padding: 120px 8%;
+    max-width: 1000px;
+}
+
+.plan-detail h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 0.95;
+    margin-bottom: 10px;
+}
+
+.plan-detail h2 {
+    color: #888888;
+    letter-spacing: 4px;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.plan-detail > p {
+    max-width: 650px;
+    color: #aaaaaa;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 60px;
+}
+
+.plan-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 50px;
+}
+
+.plan-info div {
+    padding: 25px 20px;
+    border-right: 1px solid #333333;
+}
+
+.plan-info div:last-child {
+    border-right: none;
+}
+
+.plan-info span {
+    display: block;
+    color: #777777;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.plan-info strong {
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .planes {
+        grid-template-columns: 1fr;
+    }
+
+    .plan {
+        min-height: auto;
+    }
+
+    .plan-info {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-info div {
+        border-right: none;
+        border-bottom: 1px solid #333333;
+    }
+
+    .plan-info div:last-child {
+        border-bottom: none;
+    }
+
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    max-width: 900px;
+}
+
+.plan-selected {
+    border: 1px solid #333333;
+    padding: 30px;
+    margin: 50px 0;
+}
+
+.plan-selected span {
+    display: block;
+    color: #777777;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.plan-selected h2 {
+    font-size: 24px;
+}
+
+
+/* FORMULARIO */
+
+.contact-form {
+    max-width: 700px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #888888;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    background: #111111;
+    border: 1px solid #333333;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
