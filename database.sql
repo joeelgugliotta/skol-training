@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS skol_training;
+
+USE skol_training;
+
+CREATE TABLE IF NOT EXISTS consultas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    plan VARCHAR(100),
+    mensaje TEXT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
