@@ -283,7 +283,7 @@ ${mensaje}
         console.log("✅ MAIL ENVIADO");
         console.log("Message ID:", info.messageId);
 
-        res.send("Consulta enviada correctamente");
+        res.render("confirmacion");
 
     } catch (error) {
 

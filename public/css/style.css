@@ -10,44 +10,62 @@ body {
     color: white;
 }
 
-/* NAVBAR */
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
     width: 100%;
-    padding: 25px 8%;
+    height: 85px;
+    padding: 0 8%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #292929;
+    background-color: #111111;
 }
+
+/* LOGO */
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.logo span {
-    color: #ffffff;
+.logo img {
+    width: 100px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
 }
+
+/* LINKS */
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
 .nav-links a {
-    color: white;
+    color: #aaaaaa;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    opacity: 0.6;
+    color: white;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 80vh;
@@ -73,6 +91,11 @@ body {
     margin-bottom: 40px;
 }
 
+
+/* =========================
+   BOTONES
+========================= */
+
 .btn {
     display: inline-block;
     padding: 15px 30px;
@@ -87,7 +110,10 @@ body {
     background-color: #cccccc;
 }
 
-/* SECCIONES */
+
+/* =========================
+   SECCIONES
+========================= */
 
 .section {
     padding: 100px 8%;
@@ -105,75 +131,6 @@ body {
     line-height: 1.7;
 }
 
-/* PLANES */
-
-.planes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 50px;
-}
-
-.plan {
-    border: 1px solid #333333;
-    padding: 35px;
-    transition: 0.3s;
-}
-
-.plan:hover {
-    border-color: white;
-    transform: translateY(-5px);
-}
-
-.plan h2 {
-    margin-bottom: 20px;
-}
-
-.plan p {
-    font-size: 15px;
-}
-
-/* FOOTER */
-
-footer {
-    border-top: 1px solid #292929;
-    padding: 30px 8%;
-    color: #777777;
-    text-align: center;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        min-height: 70vh;
-    }
-
-    .planes {
-        grid-template-columns: 1fr;
-    }
-
-    .section h1 {
-        font-size: 45px;
-    }
-}
-
-/* =========================
-   PLANES
-========================= */
-
 .section-header {
     margin-bottom: 60px;
 }
@@ -185,6 +142,11 @@ footer {
     letter-spacing: 3px;
     margin-bottom: 15px;
 }
+
+
+/* =========================
+   PLANES
+========================= */
 
 .planes {
     display: grid;
@@ -199,7 +161,6 @@ footer {
     color: white;
     text-decoration: none;
     min-height: 330px;
-
     transition: 0.3s;
 }
 
@@ -301,33 +262,6 @@ footer {
 }
 
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .planes {
-        grid-template-columns: 1fr;
-    }
-
-    .plan {
-        min-height: auto;
-    }
-
-    .plan-info {
-        grid-template-columns: 1fr;
-    }
-
-    .plan-info div {
-        border-right: none;
-        border-bottom: 1px solid #333333;
-    }
-
-    .plan-info div:last-child {
-        border-bottom: none;
-    }
-
-}
-
 /* =========================
    CONTACTO
 ========================= */
@@ -399,6 +333,7 @@ footer {
     cursor: pointer;
     font-family: inherit;
 }
+
 
 /* =========================
    ADMIN - CONSULTAS
@@ -485,6 +420,7 @@ footer {
     margin: 0;
 }
 
+
 /* =========================
    NOSOTROS
 ========================= */
@@ -499,8 +435,6 @@ footer {
     background: #0a0a0a;
     overflow: hidden;
 }
-
-/* CONTENIDO */
 
 .nosotros-content {
     position: relative;
@@ -523,9 +457,7 @@ footer {
 }
 
 
-/* =========================
-   FOTOS
-========================= */
+/* FOTOS */
 
 .nosotros-foto {
     position: absolute;
@@ -565,10 +497,91 @@ footer {
 
 
 /* =========================
-   MOBILE
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid #292929;
+    padding: 30px 8%;
+    color: #777777;
+    text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: auto;
+        min-height: 70px;
+        padding: 15px 6%;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 70vh;
+    }
+
+
+    /* PLANES */
+
+    .planes {
+        grid-template-columns: 1fr;
+    }
+
+    .plan {
+        min-height: auto;
+    }
+
+
+    /* DETALLE PLAN */
+
+    .plan-info {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-info div {
+        border-right: none;
+        border-bottom: 1px solid #333333;
+    }
+
+    .plan-info div:last-child {
+        border-bottom: none;
+    }
+
+
+    /* SECCIONES */
+
+    .section h1 {
+        font-size: 45px;
+    }
+
+
+    /* NOSOTROS */
 
     .nosotros {
         min-height: auto;
@@ -589,7 +602,6 @@ footer {
 
     .nosotros-foto {
         position: relative;
-
         width: 100%;
         max-width: 350px;
         height: 280px;
@@ -606,4 +618,43 @@ footer {
         bottom: auto;
         order: 2;
     }
+
+}
+
+/* CONFIRMACIÓN */
+
+.confirmacion {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.confirmacion h1 {
+    font-size: 60px;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.confirmacion p {
+    max-width: 550px;
+    color: #999;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+
+    .confirmacion h1 {
+        font-size: 42px;
+    }
+
+    .confirmacion p {
+        font-size: 15px;
+    }
+
 }
