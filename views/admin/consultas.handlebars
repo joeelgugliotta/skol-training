@@ -1,0 +1,72 @@
+<section class="section">
+
+  <div class="section-header">
+    <span class="section-number">ADMIN</span>
+
+    <h1>CONSULTAS</h1>
+
+    <p>
+      Consultas recibidas desde el formulario de SKOL Training.
+    </p>
+  </div>
+
+  <div class="consultas">
+
+    {{#if consultas}}
+
+      {{#each consultas}}
+
+        <div class="consulta">
+
+          <div class="consulta-header">
+            <span class="consulta-id">
+              #{{id}}
+            </span>
+
+            <span class="consulta-fecha">
+              {{fecha}}
+            </span>
+          </div>
+
+          <h2>{{nombre}}</h2>
+
+          <p class="consulta-email">
+            {{email}}
+          </p>
+
+          <p>
+            <strong>Plan:</strong>
+            {{plan}}
+          </p>
+
+          <p class="consulta-mensaje">
+            {{mensaje}}
+          </p>
+
+          <div class="consulta-actions">
+
+            <a href="/admin/consultas/editar/{{id}}">
+              EDITAR
+            </a>
+
+            <form action="/admin/consultas/eliminar/{{id}}" method="POST">
+              <button type="submit">
+                ELIMINAR
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+
+      {{/each}}
+
+    {{else}}
+
+      <p>No hay consultas todavía.</p>
+
+    {{/if}}
+
+  </div>
+
+</section>

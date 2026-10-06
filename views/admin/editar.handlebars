@@ -1,0 +1,94 @@
+<section class="section">
+
+    <div class="section-header">
+
+        <span class="section-number">ADMIN</span>
+
+        <h1>EDITAR CONSULTA</h1>
+
+        <p>
+            Modificá los datos de la consulta.
+        </p>
+
+    </div>
+
+
+    <form
+        action="/admin/consultas/editar/{{consulta.id}}"
+        method="POST"
+        class="contact-form"
+    >
+
+        <div class="form-group">
+
+            <label for="nombre">
+                NOMBRE
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                value="{{consulta.nombre}}"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="email">
+                EMAIL
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                value="{{consulta.email}}"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="plan">
+                PLAN
+            </label>
+
+            <input
+                type="text"
+                id="plan"
+                name="plan"
+                value="{{consulta.plan}}"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="mensaje">
+                MENSAJE
+            </label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                required
+            >{{consulta.mensaje}}</textarea>
+
+        </div>
+
+
+        <button type="submit" class="btn">
+            GUARDAR CAMBIOS
+        </button>
+
+    </form>
+
+</section>

@@ -35,61 +35,64 @@
 
     <form action="/contacto" method="POST" class="contact-form">
 
-        <div class="form-group">
+    <!-- PLAN SELECCIONADO -->
+    <input type="hidden" name="plan" value="{{plan}}">
 
-            <label for="nombre">
-                NOMBRE
-            </label>
+    <div class="form-group">
 
-            <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Tu nombre"
-                required
-            >
+        <label for="nombre">
+            NOMBRE
+        </label>
 
-        </div>
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+        >
 
-
-        <div class="form-group">
-
-            <label for="email">
-                EMAIL
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="tuemail@gmail.com"
-                required
-            >
-
-        </div>
+    </div>
 
 
-        <div class="form-group">
+    <div class="form-group">
 
-            <label for="mensaje">
-                MENSAJE
-            </label>
+        <label for="email">
+            EMAIL
+        </label>
 
-            <textarea
-                id="mensaje"
-                name="mensaje"
-                rows="6"
-                placeholder="Contame qué estás buscando..."
-                required
-            ></textarea>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tuemail@gmail.com"
+            required
+        >
 
-        </div>
+    </div>
 
 
-        <button type="submit" class="btn">
-            QUIERO ESTE PLAN →
-        </button>
+    <div class="form-group">
 
-    </form>
+        <label for="mensaje">
+            MENSAJE
+        </label>
+
+        <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="6"
+            placeholder="Contame qué estás buscando..."
+            required
+        ></textarea>
+
+    </div>
+
+
+    <button type="submit" class="btn">
+        QUIERO ESTE PLAN →
+    </button>
+
+</form>
 
 </section>
